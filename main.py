@@ -274,7 +274,7 @@ def __bot__():
         hello_msg = " Тестирование алгоритмов RSA"
         author_msg = "Автор бота: Лемнёв Вадим"
         ps_msg = "_P.S. при генерации ключей рекомендую выбирать n <= 512_\n" + dot_unicode + " _n = 1024_, затраченное время _~ 8 секунд_\n" + dot_unicode + " _n = 2048_, затраченное время _~ 60 секунд_\n"
-        output = "\n".join([hello_msg, ps_msg])
+        output = "\n".join([hello_msg, author_msg, ps_msg])
         update.message.reply_text(output, parse_mode=telegram.ParseMode.MARKDOWN)
 
     def service(update, context):
