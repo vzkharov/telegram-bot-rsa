@@ -292,7 +292,7 @@ def __bot__():
         n = int(context.args[0])
         public, N = rsa.generate_keys(n)
 
-        output = str(public)
+        output = "\n".join(["publicKey:" + str(public), "N:" + str(N)])
         update.message.reply_text(output, parse_mode=telegram.ParseMode.MARKDOWN)
 
     def enc(update, context):
